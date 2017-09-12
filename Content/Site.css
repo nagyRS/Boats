@@ -1,0 +1,51 @@
+﻿
+body {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-image:url(/Content/img/sunnywaves.jpg);
+    background-repeat:no-repeat;
+    background-size:cover;
+
+}
+
+.well{
+   opacity:0.9;
+    text-align:center;
+}
+
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+.panel{
+   background-color: rgba(255,255,255,0.8);
+}
+
+#home,
+#home:visited,
+#home:hover
+{
+    color:orange;
+}
+
+footer{
+    color: white;
+}
+
+td{
+    font-size:larger;
+}
+
+/*.page-header{
+    background-color: rgba(255,255,255,0.8);
+}*/

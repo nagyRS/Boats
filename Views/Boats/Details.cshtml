@@ -1,0 +1,73 @@
+﻿@model BWL.Domain.Entities.Boat
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h4>@Model.Name</h4>
+        </div>
+    <div class="panel-body">
+        <div class="row">
+            <div class="col-sm-6">
+            <dl class="dl-horizontal">
+                <dt>
+                    @Html.DisplayNameFor(model => model.Name)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Name)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Length)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Length) ft
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.YearBuilt)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.YearBuilt)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Price)
+                </dt>
+
+                <dd>
+                    £@Html.DisplayFor(model => model.Price)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.BestOfferUrl)
+                </dt>
+
+                <dd>
+                    <a href=@Url.Content(Model.BestOfferUrl) target="_blank">@Model.BestOfferUrl</a>
+                </dd>
+            </dl>
+            </div>
+
+                <div class="col-sm-6">
+                    <img class="img-responsive img-thumbnail" src="@Url.Content(Model.ImageUrl)" alt="Image" />
+                </div>
+
+        </div>
+
+   
+    </div>
+    <div class="panel-footer">
+        @Html.ActionLink("Back to List", "Index", null, new { @class = "btn btn-default" })
+        @Html.ActionLink("Edit", "Edit", new { id = Model.Id }, new { @class = "btn btn-info" })
+        @Html.ActionLink("Delete", "Delete", new { id = Model.Id }, new { @class = "btn btn-info"})
+    </div>
+</div>
