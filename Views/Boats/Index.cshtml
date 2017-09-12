@@ -30,9 +30,6 @@
                             <th>
                                 Image
                             </th>
-                            @*<th>
-                                    @Html.DisplayNameFor(model => model.Length)
-                                </th>*@
                             <th>
                                     @Html.DisplayNameFor(model => model.Price)
                                 </th>
@@ -54,14 +51,9 @@
                                 <td>
                                     <img src="@Url.Content(item.ImageUrl)" height="150" width="210" alt="Image" />
                                 </td>
-                                @*<td>
-                                        @Html.DisplayFor(modelItem => item.Length) ft
-                                    </td>*@
                                     <td>
                                         £@Html.DisplayFor(modelItem => item.Price)
                                     </td>
-
-
                                 <td>
 
                                     @Html.ActionLink("More information", "Details", new { id = item.Id }, new { @class = "btn btn-info" })
